@@ -1,0 +1,127 @@
+.header {
+    background-image: linear-gradient(to right, $blue, $green);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        max-width: 1140px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    &__logo {
+        color: $white;
+        width: 10rem;
+        fill: $white;
+
+        @include mobile {
+            width: 7rem;
+        }
+    }
+}
+
+.nav {
+    @include tablet {
+        transform: translateY(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        transition: transform 0.5s;
+        transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, $blue, $green);
+    }
+
+        &.reveal {
+        transform: translateY(0);
+        visibility: visible;
+        transition: transform 0.5s;
+        transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+        }
+
+    &__list {
+        display: flex;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+
+    &__link {
+        display: inline-block;
+        color: $white-shade;
+        padding: 1.2rem 1.6rem;
+        transition: color 0.2s linear;
+
+        @include tablet {
+            font-size: 1.1rem;
+        }
+
+        &--last {
+            padding: 1.2rem 0 1.2rem 1.6rem;
+        }
+
+         &:hover {
+             color: $green;
+         }
+    }
+}
+
+.nav-btn {
+    position: relative;
+    z-index: 1000;
+    width: 5rem;
+    display: none;
+    cursor: pointer;
+    @include tablet {
+        display: block;
+        width: 4rem;
+    }
+}
+
+
+  
+#menu-btn {
+    width: 60px;
+
+    & path {
+    fill: none;
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25),
+    stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    stroke-width: 10px;
+    stroke: #fff;
+    stroke-dashoffset: 0px;
+    }
+}
+
+#menu-btn path {
+    stroke-width: 2px;
+}
+#menu-btn path.top {
+    stroke-dasharray: 62px 180px;
+}
+#menu-btn path.middle {
+    stroke-dasharray: 40px 30px;
+}
+#menu-btn path.bottom {
+    stroke-dasharray: 62px 180px;
+}
+
+#menu-btn path.top.cross,
+#menu-btn path.bottom.cross {
+    stroke-dashoffset: 170px;
+}
+
+#menu-btn path.middle.cross {
+    stroke-dashoffset: -115px;
+    stroke-dasharray: 1px 220px;
+}

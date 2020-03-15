@@ -1,0 +1,33 @@
+.button {
+    display: inline-block;
+    padding: .6rem 1.4rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: $font-common;
+    box-shadow: 1px;
+    box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
+    font-weight: 300;
+    font-size: .9rem;
+
+    @include mobile {
+        display: block;
+        width: 100%;
+    }
+
+    &--main {
+        background-color: $redish;
+        color: $white-shade;
+        transition: background-color 0.2s linear;
+
+        &:hover {
+            background-color: #fa6592;
+        }
+    }
+
+    &--secondary {
+        color: $grey-dark-shade;
+    }
+}

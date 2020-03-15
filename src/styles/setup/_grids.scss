@@ -1,0 +1,30 @@
+.grid-33 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1.5rem;
+
+     @include tablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.grid-25 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,4fr));
+
+    @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 2fr));
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.gap1 {grid-gap: .25rem}
+.gap2{grid-gap: .5rem;}
+.gap3 {  grid-gap: 1rem;}
+.gap4{ grid-gap: 1.75rem;}

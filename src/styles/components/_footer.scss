@@ -1,0 +1,36 @@
+.footer {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: $grey-dark-shade;
+
+
+    &__title {
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 20px;
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+
+    &__item {
+       margin-bottom: 5px;
+
+       @include mobile {
+           margin-bottom: 0;
+    
+       }
+    }
+
+    &__link {
+        color: #a09f9f;
+        transition: color 0.1s linear;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}

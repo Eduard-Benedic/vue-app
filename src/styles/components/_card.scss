@@ -1,0 +1,103 @@
+.card {
+    min-width: 200px;
+    box-shadow: 1px 2px 3px 3px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-rows: 150px auto auto;
+    
+    @include mobile {
+        grid-template-rows: auto;
+    }
+    
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: 2rem 1.25rem;
+
+        @include mobile {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+    }
+
+    &__svg {
+        width: 8rem;
+        margin-right: 1.5rem;
+        
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+    }
+
+    &__title {
+        color: $grey-dark-shade;
+        font-size: $font-md;
+        line-height: 1.2;
+        letter-spacing: 1px;
+    }
+
+    &__subtitle {
+        color: $grey-dark-shade;
+        font-weight: 300;
+        font-size: $font-common;
+    }
+
+    &__p {
+        color: #757575;
+        padding: 2rem 1.25rem;
+
+        @include mobile {
+            padding: 1.5rem 1.25rem;
+        }
+    }
+
+    &__logo {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-right: 25px;
+
+        @include mobile {
+            margin-right: 0;
+            margin-bottom: .75rem;
+        }
+        
+    }
+
+    &__footer {
+        padding: .5rem 1.25rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        width: 20rem;
+        height: 10rem;
+        object-fit: cover;
+    }
+
+
+    &__actions {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+
+            & a {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
